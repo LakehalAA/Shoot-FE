@@ -6,7 +6,6 @@ import colors from 'assets/theme/base/colors';
 import { FaEllipsisH } from 'react-icons/fa';
 import linearGradient from 'assets/theme/functions/linearGradient';
 import CircularProgress from '@mui/material/CircularProgress';
-import lvqr from "../../../../assets/images/lvqr.png"
 
 function ReferralTracking() {
 	const { info, gradients } = colors;
@@ -26,7 +25,7 @@ function ReferralTracking() {
 					sx={{ width: '100%' }}
 					mb='40px'>
 					<VuiTypography variant='lg' color='white' mr='auto' fontWeight='bold'>
-						La Vache Qui Rit
+						Referral Tracking
 					</VuiTypography>
 					<VuiBox
 						display='flex'
@@ -84,10 +83,10 @@ function ReferralTracking() {
 								}
 							})}>
 							<VuiTypography color='text' variant='button' fontWeight='regular' mb='5px'>
-								Length
+								Invited
 							</VuiTypography>
 							<VuiTypography color='white' variant='lg' fontWeight='bold'>
-								15 Challenges
+								145 people
 							</VuiTypography>
 						</VuiBox>
 						<VuiBox
@@ -107,17 +106,17 @@ function ReferralTracking() {
 								}
 							})}>
 							<VuiTypography color='text' variant='button' fontWeight='regular' mb='5px'>
-								Submissions
+								Bonus
 							</VuiTypography>
 							<VuiTypography color='white' variant='lg' fontWeight='bold'>
-								112
+								1,465
 							</VuiTypography>
 						</VuiBox>
 					</Stack>
 					<VuiBox sx={{ position: 'relative', display: 'inline-flex' }}>
 						<CircularProgress
 							variant='determinate'
-							value={100}
+							value={70}
 							size={window.innerWidth >= 1024 ? 200 : window.innerWidth >= 768 ? 170 : 200}
 							color='success'
 						/>
@@ -133,7 +132,24 @@ function ReferralTracking() {
 								justifyContent: 'center'
 							}}>
 							<VuiBox display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
-								<img src={lvqr} height={250} />
+								<VuiTypography color='text' variant='button' mb='4px'>
+									Safety
+								</VuiTypography>
+								<VuiTypography
+									color='white'
+									variant='d5'
+									fontWeight='bold'
+									mb='4px'
+									sx={({ breakpoints }) => ({
+										[breakpoints.only('xl')]: {
+											fontSize: '32px'
+										}
+									})}>
+									9.3
+								</VuiTypography>
+								<VuiTypography color='text' variant='button'>
+									Total Score
+								</VuiTypography>
 							</VuiBox>
 						</VuiBox>
 					</VuiBox>

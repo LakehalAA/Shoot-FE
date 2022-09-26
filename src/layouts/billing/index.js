@@ -28,6 +28,8 @@ import MasterCard from "examples/Cards/MasterCard";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
+import Projects from "layouts/dashboard/components/Projects";
+import OrderOverview from "layouts/dashboard/components/OrderOverview";
 
 // Billing page components
 import PaymentMethod from "layouts/billing/components/PaymentMethod";
@@ -41,33 +43,21 @@ function Billing() {
     <DashboardLayout>
       <DashboardNavbar />
       <VuiBox mt={4}>
-        <VuiBox mb={1.5}>
+        <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={7} xl={8}>
-              <Grid container spacing={3}>
-                <Grid item xs={12} xl={6}>
-                  <MasterCard number={7812213908237916} valid="05/24" cvv="09X" />
-                </Grid>
-                <Grid item xs={12} md={12} xl={6}>
-                  <CreditBalance />
-                </Grid>
-                <Grid item xs={12}>
-                  <PaymentMethod />
-                </Grid>
+            <Grid container spacing={3} direction="row" justifyContent="center" alignItems="stretch">
+              <Grid item xs={12} md={6} lg={12}>
+                <Projects />
               </Grid>
-            </Grid>
-            <Grid item xs={12} lg={5} xl={4}>
-              <Invoices />
             </Grid>
           </Grid>
         </VuiBox>
-        <VuiBox my={3}>
+        <VuiBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={7}>
-              <BillingInformation />
-            </Grid>
-            <Grid item xs={12} md={5}>
-              <Transactions />
+            <Grid container spacing={3} direction="row" justifyContent="center" alignItems="stretch">
+              <Grid item xs={12} md={6} lg={12}>
+                <Projects />
+              </Grid>
             </Grid>
           </Grid>
         </VuiBox>
